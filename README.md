@@ -1,5 +1,7 @@
 # Spectral Indices
-Spectral indices to measure the depth of the main features in the mid-infrared spectra of ultracool objects (see figure below).
+
+## Introduction
+``spectral_indices`` is a set of functions to measure the depth of the main features in the mid-infrared spectra of ultracool objects (see figure below).
 
 Collection of Spitzer IRS mid-infrared spectra in [Suárez & Metchev (2022)](https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.5701S/abstract) highlighting the main features at different spectral types. This repository allows you to measure the strength of the indicated water, methane, amonnia, and silicates features.
 
