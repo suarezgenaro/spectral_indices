@@ -26,3 +26,11 @@ Function included to measure spectral indices:
 </p>
 
 ## Silicate Index
+
+- [x] #739
+- [ ] [https://github.com/octo-org/octo-repo/issues/740](https://github.com/suarezgenaro/seda/issues/19)
+- [ ] Add delight to the experience when all tasks are complete :tada:
+
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
