@@ -78,4 +78,4 @@ Collection of Spitzer IRS mid-infrared spectra in [Suárez & Metchev (2022)](htt
 			- ``'wl'`` : input ``wl``
 			- ``'flux'`` : input ``flux``
 			- ``'eflux'`` : input ``eflux``
-	- Plot of the silicate index measurement that will be stored if ``save`` with the name ``out_file``.
+	- Plot of the silicate index measurement that will be stored if ``plot_save``.
