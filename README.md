@@ -8,7 +8,10 @@ Spectral indices to measure the depth of the main features in the mid-infrared s
 Collection of Spitzer IRS mid-infrared spectra in [Suárez & Metchev (2022)](https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.5701S/abstract) highlighting the main features at different spectral types. This repository allows you to measure the strength of the indicated water, methane, amonnia, and silicates features.
 
 [//]: # (This is a comment.)
-![alt text](https://github.com/suarezgenaro/spectral_indices/blob/main/Spitzer_IRS_spectra.png)
+
+<p align="center">
+    <img src="Spitzer_IRS_spectra.png" title="Spitzer IRS spectra of ultracool objects" alt="Spitzer IRS spectra of ultracool objects" width="500">
+</p>
 
 ## Silicate Index
 	Description:
