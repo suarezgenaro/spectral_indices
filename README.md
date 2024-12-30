@@ -16,7 +16,7 @@ Function included to measure spectral indices:
 * ammonia_index: ammonia index for the ammonia absorption feature at 10.5 microns as defined in [Cushing et al. (2006](https://ui.adsabs.harvard.edu/abs/2006ApJ...648..614C/abstract) and modified in [Suárez & Metchev (2022)](https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.5701S/abstract).
 
 ## Tutorial
-[This tutorial](https://github.com/suarezgenaro/spectral_indices/blob/main/example_index_measurements.ipynb) explains how to obtain silicate, water, methane, and ammonia indices for mid-infrared spectra of brown dwarfs, as shown below:
+[This tutorial](https://github.com/suarezgenaro/spectral_indices/blob/main/aux/example_index_measurements.ipynb) explains how to obtain silicate, water, methane, and ammonia indices for mid-infrared spectra of brown dwarfs, as shown below:
 
 <p align="center">
     <img src="aux/silicate_index_measurement.png" title="Silicate index" width="400">
