@@ -75,7 +75,7 @@ def silicate_index(wl, flux, eflux, silicate_peak=None, silicate_window=None, si
 			- ``'wl'`` : input ``wl``
 			- ``'flux'`` : input ``flux``
 			- ``'eflux'`` : input ``eflux``
-	- Plot of the silicate index measurement that will be stored if ``save`` with the name ``out_file``.
+	- Plot of the silicate index measurement that will be stored if ``plot_save``.
 
 	Author: Genaro Suárez
 	'''
