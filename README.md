@@ -1,4 +1,4 @@
-# Spectral Indices
+# ``spectral_indices``
 
 ## Introduction
 ``spectral_indices`` is a set of functions to measure the depth of the main features in the mid-infrared spectra of ultracool objects (see figure below).
