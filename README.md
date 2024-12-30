@@ -10,7 +10,7 @@ Collection of Spitzer IRS mid-infrared spectra in [Suárez & Metchev (2022)](htt
 [//]: # (This is a comment.)
 
 <p align="center">
-    <img src="Spitzer_IRS_spectra.png" title="Spitzer IRS spectra of ultracool objects" alt="Spitzer IRS spectra of ultracool objects" width="500">
+    <img src="Spitzer_IRS_spectra.png" title="Spitzer IRS spectra of ultracool objects" alt="Spitzer IRS spectra of ultracool objects" width="600">
 </p>
 
 ## Silicate Index
