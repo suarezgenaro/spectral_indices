@@ -6,7 +6,7 @@ Collection of Spitzer IRS mid-infrared spectra in [Suárez & Metchev (2022)](htt
 [//]: # (This is a comment.)
 
 <p align="center">
-    <img src="Spitzer_IRS_spectra.png" title="Spitzer IRS spectra of ultracool objects" alt="Spitzer IRS spectra of ultracool objects" width="500">
+    <img src="aux/Spitzer_IRS_spectra.png" title="Spitzer IRS spectra of ultracool objects" alt="Spitzer IRS spectra of ultracool objects" width="500">
 </p>
 
 Function included to measure spectral indices:
@@ -19,10 +19,10 @@ Function included to measure spectral indices:
 [This tutorial](https://github.com/suarezgenaro/spectral_indices/blob/main/example_index_measurements.ipynb) explains how to obtain silicate, water, methane, and ammonia indices for mid-infrared spectra of brown dwarfs, as shown below:
 
 <p align="center">
-    <img src="silicate_index_measurement.png" title="Silicate index" width="400">
-    <img src="water_index_measurement.png" title="Water index" width="400">
-    <img src="methane_index_measurement.png" title="Methane index" width="400">
-    <img src="ammonia_index_measurement.png" title="Ammonia index" width="400">
+    <img src="aux/silicate_index_measurement.png" title="Silicate index" width="400">
+    <img src="aux/water_index_measurement.png" title="Water index" width="400">
+    <img src="aux/methane_index_measurement.png" title="Methane index" width="400">
+    <img src="aux/ammonia_index_measurement.png" title="Ammonia index" width="400">
 </p>
 
 ## Silicate Index
