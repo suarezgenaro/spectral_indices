@@ -11,7 +11,7 @@ Collection of Spitzer IRS mid-infrared spectra in [Suárez & Metchev (2022)](htt
     <img src="aux/Spitzer_IRS_spectra.png" title="Spitzer IRS spectra of ultracool objects" alt="Spitzer IRS spectra of ultracool objects" width="500">
 </p>
 
-## Functions
+## Overview
 Functions included to measure spectral indices:
 * silicate_index: silicate index for the silicate absorption feature at 9.3 microns as defined in [Suárez & Metchev (2022)](https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.5701S/abstract) and improved in [Suárez & Metchev (2023)](https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.4739S/abstract).
 * water_index: water index for the water absorption feature at 6.25 microns as defined in [Cushing et al. (2006](https://ui.adsabs.harvard.edu/abs/2006ApJ...648..614C/abstract) and modified in [Suárez & Metchev (2022)](https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.5701S/abstract).
@@ -28,7 +28,7 @@ Functions included to measure spectral indices:
     <img src="aux/ammonia_index_measurement.png" title="Ammonia index" width="400">
 </p>
 
-## About the functions
+## Functions
 ### ``spectral_indices.silicate_index``
 	Description:
 	------------
