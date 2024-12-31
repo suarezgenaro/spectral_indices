@@ -246,7 +246,8 @@ def water_index(wl, flux, eflux, default='SM22', water_window=None, water_max=No
 
 	Returns:
 	--------
-	Dictionary with water index parameters:
+	- Dictionary 
+		Dictionary with water index parameters:
 			- ``'water_index'`` : water index
 			- ``'ewater_index'`` : water index uncertainty
 			- ``'flux_water_max'`` : flux at the absorption peak
@@ -259,6 +260,9 @@ def water_index(wl, flux, eflux, default='SM22', water_window=None, water_max=No
 			- ``'water_min1'`` : input ``water_min1``
 			- ``'water_min2'`` : input ``water_min2``
 			- ``'water_window'`` : input ``water_window``
+	- Plot of the water index measurement that will be stored if ``plot_save``.
+
+	Author: Genaro Suárez
 	'''
 
 	# avoid nan values
@@ -369,7 +373,8 @@ def methane_index(wl, flux, eflux, default='SM22', methane_window=None, methane_
 
 	Returns:
 	--------
-	Dictionary with methane index parameters:
+	- Dictionary 
+		Dictionary with methane index parameters:
 			- ``'methane_index'`` : methane index
 			- ``'emethane_index'`` : methane index uncertainty
 			- ``'flux_methane_in'`` : flux within the absorption
@@ -379,6 +384,9 @@ def methane_index(wl, flux, eflux, default='SM22', methane_window=None, methane_
 			- ``'methane_in'`` : input ``methane_in``
 			- ``'methane_out'`` : input ``methane_out``
 			- ``'methane_window'`` : input ``methane_window``
+	- Plot of the methane index measurement that will be stored if ``plot_save``.
+
+	Author: Genaro Suárez
 	'''
 
 	# avoid nan values
@@ -473,7 +481,8 @@ def ammonia_index(wl, flux, eflux, default='SM22', ammonia_window=None, ammonia_
 
 	Returns:
 	--------
-	Dictionary with ammonia index parameters:
+	- Dictionary 
+		Dictionary with ammonia index parameters:
 			- ``'ammonia_index'`` : ammonia index
 			- ``'eammonia_index'`` : ammonia index uncertainty
 			- ``'flux_ammonia_in'`` : flux within the absorption
@@ -483,6 +492,9 @@ def ammonia_index(wl, flux, eflux, default='SM22', ammonia_window=None, ammonia_
 			- ``'ammonia_in'`` : input ``ammonia_in``
 			- ``'ammonia_out'`` : input ``ammonia_out``
 			- ``'ammonia_window'`` : input ``ammonia_window``
+	- Plot of the ammonia index measurement that will be stored if ``plot_save``.
+
+	Author: Genaro Suárez
 	'''
 
 	# avoid nan values
