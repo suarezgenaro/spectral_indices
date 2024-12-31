@@ -95,7 +95,6 @@ Function included to measure spectral indices:
 	Author: Genaro Suárez
 
 ### ``spectral_indices.water_index``
-	'''
 	Description:
 	------------
 		Measure the strength of the mid-infrared water absorption considering the defined water index in Cushing et al. (2006) and modified in Suárez & Metchev (2022).
@@ -132,7 +131,8 @@ Function included to measure spectral indices:
 
 	Returns:
 	--------
-	Dictionary with water index parameters:
+	- Dictionary 
+		Dictionary with water index parameters:
 			- ``'water_index'`` : water index
 			- ``'ewater_index'`` : water index uncertainty
 			- ``'flux_water_max'`` : flux at the absorption peak
@@ -145,4 +145,109 @@ Function included to measure spectral indices:
 			- ``'water_min1'`` : input ``water_min1``
 			- ``'water_min2'`` : input ``water_min2``
 			- ``'water_window'`` : input ``water_window``
-	'''
+	- Plot of the water index measurement that will be stored if ``plot_save``.
+
+	Author: Genaro Suárez
+
+### ``spectral_indices.methane_index``
+ 	Description:
+	------------
+		Measure the strength of the mid-infrared methane absorption considering the defined methane index in Cushing et al. (2006) and modified in Suárez & Metchev (2022).
+
+	Parameters:
+	-----------
+	- wl : array
+		Spectrum wavelengths in microns.
+	- flux : array
+		Spectrum fluxes in Jy.
+	- eflux : array
+		Spectrum flux errors in Jy.
+	- default : {``SM22``, ``C06``}, optional (default ``SM22``)
+		Reference to set default parameters to measure the methane index.
+		``SM22`` (default) for Suárez & Metchev (2022) or ``C08`` for Cushing et al (2006).
+	- methane_in : float, optional (default 7.65 um)
+		Wavelength reference within the feature.
+	- methane_out : float, optional (default 9.9 um)
+		Wavelength reference out of the feature.
+		Note: the default value is slightly smaller than the 10 um value in Suárez & Metchev (2022) to avoid including fluxes at the beginning of the ammonia feature.
+	- methane_window : float, optional (default 0.6 um)
+		Wavelength window around ``methane_in`` and ``methane_out`` used to calculate average fluxes.
+	- plot : {``True``, ``False``}, optional (default ``False``)
+		Plot (``True``) or do not plot (``False``) the methane index measurement.
+	- plot_title : str, optional
+		Plot title (default ``'Methane Index Measurement'``.
+	- plot_xrange : list or array
+		Wavelength range (in microns) of the plot (default [5.2, 14] um).
+	- plot_yrange : list or array
+		Flux range (in Jy) of the plot (default is the flux range in ``plot_xrange``).
+	- plot_save : {``True``, ``False``}, optional (default ``False``)
+		Save (``'True'``) or do not save (``'False'``) the resulting plot.
+
+	Returns:
+	--------
+	- Dictionary 
+		Dictionary with methane index parameters:
+			- ``'methane_index'`` : methane index
+			- ``'emethane_index'`` : methane index uncertainty
+			- ``'flux_methane_in'`` : flux within the absorption
+			- ``'eflux_methane_in'`` : flux uncertainty within the absorption
+			- ``'flux_methane_out'`` : flux out of the absorption
+			- ``'eflux_methane_out'`` : flux uncertainty out of the absorption
+			- ``'methane_in'`` : input ``methane_in``
+			- ``'methane_out'`` : input ``methane_out``
+			- ``'methane_window'`` : input ``methane_window``
+	- Plot of the methane index measurement that will be stored if ``plot_save``.
+
+	Author: Genaro Suárez
+
+### ``spectral_indices.ammonia_index``
+	Description:
+	------------
+		Measure the strength of the mid-infrared ammonia absorption considering the defined ammonia index in Cushing et al. (2006) and modified in Suárez & Metchev (2022).
+
+	Parameters:
+	-----------
+	- wl : array
+		Spectrum wavelengths in microns.
+	- flux : array
+		Spectrum fluxes in Jy.
+	- eflux : array
+		Spectrum flux errors in Jy.
+	- default : {``SM22``, ``C06``}, optional (default ``SM22``)
+		Reference to set default parameters to measure the ammonia index.
+		``SM22`` (default) for Suárez & Metchev (2022) or ``C08`` for Cushing et al (2006).
+	- ammonia_in : float, optional (default 10.6 um)
+		Wavelength reference within the feature.
+		Note: the default value is slightly smaller than the 10.8 um value in Suárez & Metchev (2022) to be centered better within the feature.
+	- ammonia_out : float, optional (default 9.9 um)
+		Wavelength reference out of the feature.
+		Note: the default value is slightly smaller than the 10 um value in Suárez & Metchev (2022) to avoid including fluxes at the beginning of the ammonia feature.
+	- ammonia_window : float, optional (default 0.6 um)
+		Wavelength window around ``ammonia_in`` and ``ammonia_out`` used to calculate average fluxes.
+	- plot : {``True``, ``False``}, optional (default ``False``)
+		Plot (``True``) or do not plot (``False``) the ammonia index measurement.
+	- plot_title : str, optional
+		Plot title (default ``'Ammonia Index Measurement'``.
+	- plot_xrange : list or array
+		Wavelength range (in microns) of the plot (default [5.2, 14] um).
+	- plot_yrange : list or array
+		Flux range (in Jy) of the plot (default is the flux range in ``plot_xrange``).
+	- plot_save : {``True``, ``False``}, optional (default ``False``)
+		Save (``'True'``) or do not save (``'False'``) the resulting plot.
+
+	Returns:
+	--------
+	- Dictionary 
+		Dictionary with ammonia index parameters:
+			- ``'ammonia_index'`` : ammonia index
+			- ``'eammonia_index'`` : ammonia index uncertainty
+			- ``'flux_ammonia_in'`` : flux within the absorption
+			- ``'eflux_ammonia_in'`` : flux uncertainty within the absorption
+			- ``'flux_ammonia_out'`` : flux out of the absorption
+			- ``'eflux_ammonia_out'`` : flux uncertainty out of the absorption
+			- ``'ammonia_in'`` : input ``ammonia_in``
+			- ``'ammonia_out'`` : input ``ammonia_out``
+			- ``'ammonia_window'`` : input ``ammonia_window``
+	- Plot of the ammonia index measurement that will be stored if ``plot_save``.
+
+	Author: Genaro Suárez
