@@ -74,11 +74,8 @@ def silicate_index(wl, flux, eflux, silicate_min=None, silicate_window=None, sil
 	Author: Genaro Suárez
 	'''
 
-	# avoid nan values
-	mask_nan = ~np.isnan(eflux)
-	wl = wl[mask_nan]
-	flux = flux[mask_nan]
-	eflux = eflux[mask_nan]
+	# handle input spectrum
+	wl, flux, eflux = handle_input_spectrum(wl, flux, eflux)
 
 	# use default values if optional values (peak and continuum regions) are not provided
 	if default=='SM23': # parameters in Suárez & Metchev (2023)
@@ -265,11 +262,8 @@ def water_index(wl, flux, eflux, default='SM22', water_window=None, water_max=No
 	Author: Genaro Suárez
 	'''
 
-	# avoid nan values
-	mask_nan = ~np.isnan(eflux)
-	wl = wl[mask_nan]
-	flux = flux[mask_nan]
-	eflux = eflux[mask_nan]
+	# handle input spectrum
+	wl, flux, eflux = handle_input_spectrum(wl, flux, eflux)
 
 	if default=='SM22': # parameters in Suárez & Metchev (2022)
 		if water_window is None: water_window = 0.30 # um
@@ -389,11 +383,8 @@ def methane_index(wl, flux, eflux, default='SM22', methane_window=None, methane_
 	Author: Genaro Suárez
 	'''
 
-	# avoid nan values
-	mask_nan = ~np.isnan(eflux)
-	wl = wl[mask_nan]
-	flux = flux[mask_nan]
-	eflux = eflux[mask_nan]
+	# handle input spectrum
+	wl, flux, eflux = handle_input_spectrum(wl, flux, eflux)
 
 	if default=='SM22': # parameters in Suárez & Metchev (2022)
 		if methane_in is None: methane_in = 7.65 # (um) wavelength point in of the feature
@@ -497,11 +488,8 @@ def ammonia_index(wl, flux, eflux, default='SM22', ammonia_window=None, ammonia_
 	Author: Genaro Suárez
 	'''
 
-	# avoid nan values
-	mask_nan = ~np.isnan(eflux)
-	wl = wl[mask_nan]
-	flux = flux[mask_nan]
-	eflux = eflux[mask_nan]
+	# handle input spectrum
+	wl, flux, eflux = handle_input_spectrum(wl, flux, eflux)
 
 	if default=='SM22': # parameters in Suárez & Metchev (2022)
 		#if ammonia_in is None: ammonia_in = 10.8 # (um) wavelength point in of the feature
@@ -611,9 +599,13 @@ def plot_silicate_index(out_silicate_index, plot_xrange=None, plot_yrange=None, 
 	        silicate_con2+silicate_window_con2/2, silicate_con2+silicate_window_con2/2], 
 	        [ymin, ymax, ymax, ymin], facecolor='gainsboro', linewidth=1, zorder=2)
 	
+	# plot flux uncertainty region
+	default_blue = plt.rcParams['axes.prop_cycle'].by_key()['color'][0] # default blue coloe
+	wl_region = np.append(wl, np.flip(wl))
+	flux_region = np.append(flux-eflux, np.flip(flux+eflux))
+	ax.fill(wl_region, flux_region, facecolor=default_blue, edgecolor=default_blue, linewidth=0, alpha=0.30, zorder=3)
 	# plot spectrum
-	mask = wl>0
-	plt.plot(wl[mask], flux[mask])
+	plt.plot(wl, flux, color=default_blue , zorder=3)
 	
 	# linear fit
 	xc_silicate = np.linspace(silicate_con1-silicate_window_con1/2., silicate_con2+silicate_window_con2/2., 100)
@@ -907,3 +899,16 @@ def plot_ammonia_index(out_ammonia_index, plot_xrange=None, plot_yrange=None, pl
 	plt.close()
 
 	return
+
+
+##########################
+# manipulate input spectrum before measuring spectral indices
+def handle_input_spectrum(wl, flux, eflux):
+
+	# avoid nan values and zeros in wavelength
+	mask_nan = (~np.isnan(flux)) & (~np.isnan(eflux)) & (wl>0)
+	wl = wl[mask_nan]
+	flux = flux[mask_nan]
+	eflux = eflux[mask_nan]
+	
+	return wl, flux, eflux
