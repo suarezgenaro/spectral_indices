@@ -1,6 +1,7 @@
 # ``spectral_indices``
 
 ## Introduction
+TEST
 ``spectral_indices`` is a set of functions to measure the depth of key features in the mid-infrared spectra of brown dwarfs, directly imaged exoplanets, and low-mass stars (see figure below).
 
 Collection of Spitzer IRS mid-infrared spectra in [Suárez & Metchev (2022)](https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.5701S/abstract) highlighting the main features at different spectral types (or temperatures). This repository allows us to measure the strength of the indicated water, methane, amonnia, and silicates features.
