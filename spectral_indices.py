@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator, FormatStrFormatter, AutoMinorLocator
 from sys import exit
+from ..utils import *
 
 ##########################
 def silicate_index(wl, flux, eflux, silicate_min=None, silicate_window=None, silicate_con1=None, 
