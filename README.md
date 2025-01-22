@@ -1,4 +1,5 @@
 # ``spectral_indices``
+(The most recent version of this function is available via the [SEDA](https://seda.readthedocs.io/en/latest/index.html) package through [seda.spectral_indices](https://seda.readthedocs.io/en/latest/api.html#module-seda.spectral_indices.spectral_indices).)
 
 ## Introduction
 ``spectral_indices`` is a set of functions to measure the depth of key features in the mid-infrared spectra of brown dwarfs, directly imaged exoplanets, and low-mass stars (see figure below).
